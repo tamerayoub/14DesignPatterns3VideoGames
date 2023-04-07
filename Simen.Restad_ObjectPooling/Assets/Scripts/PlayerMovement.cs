@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 4f;
-    private float jumpingPower = 8f;
+    private float jumpingPower = 1000f;
     public bool isFacingRight = true;
 
     void Update()
@@ -30,21 +30,37 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
+
+        if (Input.GetKey(KeyCode.Space))
+
+        {
+
+            Jump();
+
+        }
     }
 
-    public void Jump(InputAction.CallbackContext context)
+    //public void Jump(InputAction.CallbackContext context)
+    //{
+    //    animator.SetBool("IsJumping", true);
+
+    //    if (context.performed && IsGrounded())
+    //    {
+    //        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+    //    }
+
+    //    if (context.canceled && rb.velocity.y > 0f)
+    //    {
+    //        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+    //    }
+    //}
+
+    public void Jump()
     {
         animator.SetBool("IsJumping", true);
 
-        if (context.performed && IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
+        rb.AddRelativeForce(Vector3.up * Time.deltaTime * jumpingPower);
 
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
     }
 
     public void OnLanding()
