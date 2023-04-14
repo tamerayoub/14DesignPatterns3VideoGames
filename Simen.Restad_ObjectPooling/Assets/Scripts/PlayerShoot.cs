@@ -15,7 +15,7 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame) // this is the original if statement that only checked for left click, I added a right click if statement below for adaptability 
         {
-            GameObject bullet = ObjectPool.instance.GetPooledObject();
+            GameObject bullet = ObjectPool.instance.GetPooledObject(); 
             Debug.Log("Hit left");
             if (bullet != null)
             {
