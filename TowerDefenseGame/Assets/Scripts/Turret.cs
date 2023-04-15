@@ -40,7 +40,7 @@ public class Turret : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		InvokeRepeating("UpdateTarget", 0f, 0.5f);
-		StartCoroutine(UpdateTargetCoroutine()); // this helps us start the function UpdateTargetCoroutine where we apply the Coroutine pattern
+		StartCoroutine(UpdateTargetCoroutine()); // we need this StartCoroutine to start the function UpdateTargetCoroutine where we apply the Coroutine pattern
 	}
 	
 

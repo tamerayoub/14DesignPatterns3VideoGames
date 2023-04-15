@@ -7,7 +7,8 @@ public class RoundsSurvived : MonoBehaviour {
 
 	public Text roundsText;
 
-	void OnEnable()
+    // This function is called when the object becomes enabled and active.
+    void OnEnable()
 	{
 		StartCoroutine(AnimateText());
 	}

@@ -16,6 +16,8 @@ namespace SojaExiles
         Vector3 velocity;
 
         bool isGrounded;
+        HighJump highJump = new HighJump();
+        LowJump lowJump = new LowJump();
 
         // Update is called once per frame
         void Update()
@@ -31,6 +33,12 @@ namespace SojaExiles
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
+
+      
+              
+        
+
+            
 
         }
     }

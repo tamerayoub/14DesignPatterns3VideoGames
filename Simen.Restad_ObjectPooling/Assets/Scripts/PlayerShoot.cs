@@ -10,11 +10,15 @@ public class PlayerShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject laserPrefab; // our laser we will adapt/mod our object pool/gun to shoot
 
+
+
+
     // Update is called once per frame
     void Update()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame) // this is the original if statement that only checked for left click, I added a right click if statement below for adaptability 
         {
+           
             GameObject bullet = ObjectPool.instance.GetPooledObject(); 
             Debug.Log("Hit left");
             if (bullet != null)
@@ -23,6 +27,7 @@ public class PlayerShoot : MonoBehaviour
                 bullet.transform.rotation = shootingPoint.rotation;
                 bullet.SetActive(true);
                 bullet.GetComponent<Bullet>().SetSpeed();
+                
             }
 
         }

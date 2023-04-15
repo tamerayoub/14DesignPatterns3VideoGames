@@ -7,6 +7,8 @@ public class Bullet : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
 
+   
+
     public void SetSpeed()
     {
         rb = GetComponent<Rigidbody2D>();

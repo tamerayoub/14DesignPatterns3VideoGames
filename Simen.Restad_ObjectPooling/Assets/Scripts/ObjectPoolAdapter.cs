@@ -51,7 +51,7 @@ public class ObjectPoolAdapter : ObjectPool, IObjectPool
         else
         {
             // Throw an exception if there are no objects available in the pool
-            throw new InvalidOperationException("Object pool is empty.");
+            throw new InvalidOperationException("Just a filler, this will most likely never be called");
         }
 
     }

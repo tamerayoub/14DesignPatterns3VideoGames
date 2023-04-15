@@ -171,9 +171,9 @@ GameObject:
   - component: {fileID: 463661096}
   - component: {fileID: 463661095}
   - component: {fileID: 463661098}
-  - component: {fileID: 463661102}
   - component: {fileID: 463661100}
   - component: {fileID: 463661101}
+  - component: {fileID: 463661102}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -483,11 +483,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 463661092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41108419344061f4d99ad4ebd322e318, type: 3}
+  m_Script: {fileID: 11500000, guid: d4cb05b294e8e514890653721289dc5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shootingPoint: {fileID: 737502335}
-  bulletPrefab: {fileID: 1585935475494895989, guid: 176e2dde064297f489066c9f5c4bd329, type: 3}
+  bulletPrefab: {fileID: 6258819605645875216, guid: 28c6e08378e7cc442ad5cb91f5f2e15b, type: 3}
+  laserPrefab: {fileID: 6258819605645875216, guid: 55f361fd6249ced4eaf3faa5363c878b, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,7 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 913419654}
-  - component: {fileID: 913419653}
+  - component: {fileID: 913419655}
   m_Layer: 0
   m_Name: ObjectPool
   m_TagString: Untagged
@@ -909,19 +910,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &913419653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913419652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac6d8575b306154186443b72edc41ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 1585935475494895989, guid: 176e2dde064297f489066c9f5c4bd329, type: 3}
 --- !u!4 &913419654
 Transform:
   m_ObjectHideFlags: 0
@@ -937,6 +925,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &913419655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913419652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468173ea16a225e4393f01cd86c423cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6258819605645875216, guid: 28c6e08378e7cc442ad5cb91f5f2e15b, type: 3}
 --- !u!1 &1164375252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1081,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.5, y: 1.4}
   m_EdgeRadius: 0
+--- !u!1 &1936419784
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936419786}
+  - component: {fileID: 1936419785}
+  m_Layer: 0
+  m_Name: ObjectPoolAdapter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1936419785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936419784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd3547a673842e41a9a5fc37500d607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6258819605645875216, guid: 28c6e08378e7cc442ad5cb91f5f2e15b, type: 3}
+  laserPrefab: {fileID: 6258819605645875216, guid: 55f361fd6249ced4eaf3faa5363c878b, type: 3}
+--- !u!4 &1936419786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936419784}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7287573, y: -0.029078424, z: -0.23448445}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2075275501
 GameObject:
   m_ObjectHideFlags: 0
