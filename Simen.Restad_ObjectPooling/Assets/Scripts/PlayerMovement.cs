@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private float speed = 4f;
-    private float jumpingPower = 1000f;
+    private float jumpingPower = 1300f;
     public bool isFacingRight = true;
 
     void Update()
