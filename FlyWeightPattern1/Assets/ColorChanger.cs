@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// This script contains our FlyWeight Pattern - Modified by Tamer Ayoub
 public class ColorChanger : MonoBehaviour
 {
 

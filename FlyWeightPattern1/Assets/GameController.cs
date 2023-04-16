@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+// Modified by Tamer Ayoub; Sandbox Pattern
 
 
 public class GameController : MonoBehaviour
@@ -29,6 +29,9 @@ public class GameController : MonoBehaviour
 
 
     // Update is called once per frame
+
+    // Down below is our input handler for the SandBox Pattern; we have 3 characters and we need to add jumping ability to all of the characters, but all of their jumping skills are different...
+    // Follow along and you will see how we added different variations to each of the characters
     void Update()
     {
         if (Input.GetKeyDown("e"))

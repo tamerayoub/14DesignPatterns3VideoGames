@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Modified by Tamer Ayoub 4/16/23, this is old way of chaning colors ( The Fly Weight Pattern )
+
 public class ColorChangerOld : MonoBehaviour
 {
     private Renderer renderedObject;
