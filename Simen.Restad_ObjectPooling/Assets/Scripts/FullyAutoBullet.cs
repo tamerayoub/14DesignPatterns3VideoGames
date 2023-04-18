@@ -13,9 +13,6 @@ public class FullyAutoBullet : BulletDecorator
         // this is the original if statement that only checked for left click, I added a right click if statement below for adaptability
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-
-
-
             GameObject bullet = ObjectPool.instance.GetPooledObject();
             Debug.Log("Hit left");
             if (bullet != null)
@@ -25,7 +22,7 @@ public class FullyAutoBullet : BulletDecorator
                     bullet.transform.position = shootingPoint.position;
                     bullet.transform.rotation = shootingPoint.rotation;
                     bullet.SetActive(true);
-                    bullet.GetComponent<Bullet>().SetSpeed(100);
+                    bullet.GetComponent<Bullet>().SetSpeed(1000);
                 }
                 else
                 {
@@ -48,7 +45,7 @@ public class FullyAutoBullet : BulletDecorator
                     bullet.transform.position = shootingPoint.position;
                     bullet.transform.rotation = shootingPoint.rotation;
                     bullet.SetActive(true);
-                    bullet.GetComponent<Bullet>().SetSpeed(100);
+                    bullet.GetComponent<Bullet>().SetSpeed(1000);
                 }
                 else
                 {
