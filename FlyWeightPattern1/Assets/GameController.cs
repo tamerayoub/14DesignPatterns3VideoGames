@@ -10,6 +10,7 @@ public class GameController : MonoBehaviour
 {
 
     HighJump highJump = new HighJump();
+    MediumJump mediumJump = new MediumJump();
     LowJump lowJump = new LowJump();
 
     private AudioSource audioData;
@@ -37,21 +38,23 @@ public class GameController : MonoBehaviour
         if (Input.GetKeyDown("e"))
         {
            
-            lowJump.Activate("Homer");
+            highJump.Activate("Homer");
             audioData.Play();
         }
         if (Input.GetKeyDown("r"))
         {
          
-            highJump.Activate("Spongebob");
+            mediumJump.Activate("Spongebob");
             audioData2.Play();
         }
 
         if (Input.GetKeyDown("t"))
         {
 
-            highJump.Activate("Bunny");
+            mediumJump.Activate("Bunny");
             audioData3.Play();
         }
+
+
     }
 }

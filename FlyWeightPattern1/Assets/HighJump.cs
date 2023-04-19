@@ -8,7 +8,7 @@ public class HighJump : Jumping
     
     public override void Activate(string name)
     {
-        Jump(10, name);
+        Jump(10.0f, name);
     }
 }
 

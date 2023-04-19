@@ -11,7 +11,7 @@ public abstract class Jumping
     public string name;
     
 
-    // This is the main method for the SandBox pattern; we have different variations like LowJump and HighJump
+    // This is the main method for the SandBox pattern; we have different variations like LowJump and HighJump and MediumJump
     protected void Jump(float vertical, string name) 
     {
 
