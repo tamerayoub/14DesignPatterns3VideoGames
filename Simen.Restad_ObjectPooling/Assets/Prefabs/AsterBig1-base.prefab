@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 8465835689298227938}
   - component: {fileID: -7520157666222675352}
   - component: {fileID: -4066818295165784557}
+  - component: {fileID: -6868144484016021379}
   m_Layer: 0
   m_Name: AsterBig1-base
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +120,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -174,3 +175,18 @@ MonoBehaviour:
   secondSpawn: 0.5
   minTras: 0
   maxTras: 0
+--- !u!114 &-6868144484016021379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2896631059869581804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db06181468ed3949a5ded1945f217f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collider: {fileID: 0}
+  ground: {fileID: 0}
+  asteroid: {fileID: 0}
