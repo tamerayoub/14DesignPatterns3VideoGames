@@ -5,6 +5,7 @@ using UnityEngine;
 public class LargeAsteroid : Asteroid
 {
     private Rigidbody2D rb;
+    public IReturn NullObject { get; set; } = new NoObject();
 
     [SerializeField] GameObject[] asteroidPrefab;
     [SerializeField] float secondSpawn = 0.5f;
@@ -42,6 +43,8 @@ public class LargeAsteroid : Asteroid
     public void SetRotate()
     {
         rb.transform.Rotate(0f, 0f, 3.0f * RotationSpeed * Time.deltaTime, Space.Self);
+        //NullObject.ReturnedObject();
+        //NullObject = new NoObject();
     }
 
     void Start()

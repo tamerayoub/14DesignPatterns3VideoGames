@@ -187,6 +187,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db06181468ed3949a5ded1945f217f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collider: {fileID: 0}
-  ground: {fileID: 0}
-  asteroid: {fileID: 0}

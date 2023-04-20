@@ -12,12 +12,10 @@ public class HealthController : HealthType
         UpdateHealthGUI(-10, 0.1f);
     }
 
-
     public void OnHealthZoneEnter()
     {
         UpdateHealthGUI(5, 0.5f);
     }
-
 
     public void UpdateHealthGUI(float HealAmount, float DelayTime)
     {
