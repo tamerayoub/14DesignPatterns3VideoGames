@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 6826624057714864378}
   - component: {fileID: 5471286002384680259}
   - component: {fileID: -8188569641976845134}
+  - component: {fileID: -8987511396332431435}
   m_Layer: 0
   m_Name: AsterMed2
-  m_TagString: Untagged
+  m_TagString: Asteroid
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,7 +120,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.008705735, y: -0.025543213}
@@ -170,7 +171,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499b3853d1aa83f4bb44a56bd37dea50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: []
-  secondSpawn: 0.5
-  minTras: 0
-  maxTras: 0
+--- !u!114 &-8987511396332431435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125122759088288500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db06181468ed3949a5ded1945f217f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

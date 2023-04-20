@@ -5,38 +5,30 @@ using UnityEngine;
 
 public class AsteroidFactory : MonoBehaviour
 {
-    //public Asteroid Start()
-    //{
-    //    //return LargeAsteroid();
-    //}
-    //public Asteroid CreateAsteroid()
-    //{
-    //    return new LargeAsteroid();
+    [SerializeField] GameObject[] asteroidPrefab;
+    [SerializeField] float smallAsteroidInterval = 3.0f;
+    [SerializeField] float mediumAsteroidInterval = 5.0f;
+    [SerializeField] float largeAsteroidInterval = 9.0f;
+    [SerializeField] float minTras = -3.5f;
+    [SerializeField] float maxTras = 4.0f;
 
 
-    //    //if (type == "MediumAsteroid")
-    //    //{
-    //    //    return new MediumAsteroid();
-    //    //}
+    void Start()
+    {
+        StartCoroutine(AsteroidSpawn(asteroidPrefab[0], smallAsteroidInterval));
+        StartCoroutine(AsteroidSpawn(asteroidPrefab[1], mediumAsteroidInterval));
+        StartCoroutine(AsteroidSpawn(asteroidPrefab[2], largeAsteroidInterval));
+    }
 
-    //    //if (type == "SmallAsteroid")
-    //    //{
-    //    //    return new SmallAsteroid();
-    //    //}
-
-    //    //else
-    //    //{
-    //    //    return null;
-    //    //}
-    //}
-
-    //public Asteroid MakeAsteroid()
-    //{
-    //    Asteroid asteroid;
-    //    asteroid = CreateAsteroid();
-
-
-    //    return asteroid;
-    //}
-
+    IEnumerator AsteroidSpawn(GameObject prefab, float seconds)
+    {
+        while (true)
+        {
+            var wanted = Random.Range(minTras, maxTras);
+            var position = new Vector3(transform.position.x, wanted);
+            yield return new WaitForSeconds(seconds);
+            GameObject gameObject = Instantiate(prefab, position, Quaternion.identity);
+            Destroy(gameObject, 10f);
+        }
+    }
 }

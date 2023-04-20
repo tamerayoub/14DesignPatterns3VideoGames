@@ -14,6 +14,7 @@ public class ObjectPoolAdapter : ObjectPool, IObjectPool
 
 
     [SerializeField] private GameObject laserPrefab; // our new laser option
+
     private void Awake()
     {
         if (instance1 == null)

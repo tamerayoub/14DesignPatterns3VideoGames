@@ -6,15 +6,13 @@ public class MediumAsteroid : Asteroid
 {
     private Rigidbody2D rb;
 
-    [SerializeField] GameObject[] asteroidPrefab;
-    [SerializeField] float secondSpawn = 0.5f;
-    [SerializeField] float minTras;
-    [SerializeField] float maxTras;
 
-    public MediumAsteroid()
+    private void Start()
     {
-        rb = new Rigidbody2D();
+        SetSpeed();
+        rb = GetComponent<Rigidbody2D>();
     }
+
 
     public override float Speed
     {
@@ -41,26 +39,12 @@ public class MediumAsteroid : Asteroid
 
     public void SetRotate()
     {
-        rb.transform.Rotate(0f, 0f, 3.0f * RotationSpeed * Time.deltaTime, Space.Self);
-    }
-
-    void Start()
-    {
-        StartCoroutine(AsteroidSpawn());
-    }
-
-    IEnumerator AsteroidSpawn()
-    {
-        while (true)
+        if (rb != null)
         {
-            var wanted = Random.Range(minTras, maxTras);
-            var position = new Vector3(transform.position.x, wanted);
-            GameObject gameObject = Instantiate(asteroidPrefab[Random.Range(0, asteroidPrefab.Length)], position, Quaternion.identity);
-            yield return new WaitForSeconds(secondSpawn);
-            gameObject.GetComponent<MediumAsteroid>().SetSpeed();
-            Destroy(gameObject, 10f);
+            rb.transform.Rotate(0f, 0f, 3.0f * RotationSpeed * Time.deltaTime, Space.Self);
         }
     }
+
 
     // Update is called once per frame
     void Update()

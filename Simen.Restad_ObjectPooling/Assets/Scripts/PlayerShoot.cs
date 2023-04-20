@@ -26,7 +26,7 @@ public class PlayerShoot : MonoBehaviour
                 bullet.transform.position = shootingPoint.position;
                 bullet.transform.rotation = shootingPoint.rotation;
                 bullet.SetActive(true);
-                bullet.GetComponent<Bullet>().SetSpeed();
+                bullet.GetComponent<Bullet>().SetSpeed(10);
                 
             }
 
@@ -40,7 +40,7 @@ public class PlayerShoot : MonoBehaviour
                 laser.transform.position = shootingPoint.position;
                 laser.transform.rotation = shootingPoint.rotation;
                 laser.SetActive(true);
-                laser.GetComponent<Bullet>().SetSpeed();
+                laser.GetComponent<Bullet>().SetSpeed(10);
             }
         }
     }
