@@ -1344,8 +1344,6 @@ GameObject:
   m_Component:
   - component: {fileID: 960035406}
   - component: {fileID: 960035407}
-  - component: {fileID: 960035409}
-  - component: {fileID: 960035408}
   m_Layer: 0
   m_Name: Asteroid Spawn
   m_TagString: Untagged
@@ -1377,46 +1375,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 960035404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91306317050a274eb436142b9c9c558, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroidPrefab:
-  - {fileID: 8629437005266122317, guid: 934d3b232c13b22409794f16bd4d663a, type: 3}
-  secondSpawn: 9
-  minTras: -3.5
-  maxTras: 4
---- !u!114 &960035408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960035404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 499b3853d1aa83f4bb44a56bd37dea50, type: 3}
+  m_Script: {fileID: 11500000, guid: 969a8640f49cf7f42a541dc46b7ad3dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab:
   - {fileID: 8125122759088288500, guid: 0ff475f477b7d3d43bdf7fcc983f8389, type: 3}
-  secondSpawn: 7
-  minTras: -3.5
-  maxTras: 4
---- !u!114 &960035409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960035404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0753b6110cdd99040a384545bdd249f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asteroidPrefab:
   - {fileID: 2896631059869581804, guid: f799fc52b7c49b74f8e1de4d40f69fa9, type: 3}
-  secondSpawn: 5
+  - {fileID: 8629437005266122317, guid: 934d3b232c13b22409794f16bd4d663a, type: 3}
+  smallAsteroidInterval: 3
+  mediumAsteroidInterval: 5
+  largeAsteroidInterval: 9
   minTras: -3.5
   maxTras: 4
 --- !u!1 &1153881704

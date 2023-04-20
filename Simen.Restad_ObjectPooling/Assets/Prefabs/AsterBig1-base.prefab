@@ -171,10 +171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0753b6110cdd99040a384545bdd249f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: []
-  secondSpawn: 0.5
-  minTras: 0
-  maxTras: 0
 --- !u!114 &-6868144484016021379
 MonoBehaviour:
   m_ObjectHideFlags: 0

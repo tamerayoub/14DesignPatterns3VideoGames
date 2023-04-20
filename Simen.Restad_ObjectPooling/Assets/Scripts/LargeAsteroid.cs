@@ -5,17 +5,14 @@ using UnityEngine;
 public class LargeAsteroid : Asteroid
 {
     private Rigidbody2D rb;
-    public IReturn NullObject { get; set; } = new NoObject();
 
-    [SerializeField] GameObject[] asteroidPrefab;
-    [SerializeField] float secondSpawn = 0.5f;
-    [SerializeField] float minTras;
-    [SerializeField] float maxTras;
 
-    public LargeAsteroid()
+    private void Start()
     {
-        rb = new Rigidbody2D();
+        SetSpeed();
+        rb = GetComponent<Rigidbody2D>();
     }
+
 
     public override float Speed
     {
@@ -42,28 +39,12 @@ public class LargeAsteroid : Asteroid
 
     public void SetRotate()
     {
-        rb.transform.Rotate(0f, 0f, 3.0f * RotationSpeed * Time.deltaTime, Space.Self);
-        //NullObject.ReturnedObject();
-        //NullObject = new NoObject();
-    }
-
-    void Start()
-    {
-        StartCoroutine(AsteroidSpawn());
-    }
-
-    IEnumerator AsteroidSpawn()
-    {
-        while (true)
+        if (rb != null)
         {
-            var wanted = Random.Range(minTras, maxTras);
-            var position = new Vector3(transform.position.x, wanted);
-            GameObject gameObject = Instantiate(asteroidPrefab[Random.Range(0, asteroidPrefab.Length)], position, Quaternion.identity);
-            yield return new WaitForSeconds(secondSpawn);
-            gameObject.GetComponent<LargeAsteroid>().SetSpeed();
-            Destroy(gameObject, 10f);
+            rb.transform.Rotate(0f, 0f, 3.0f * RotationSpeed * Time.deltaTime, Space.Self);
         }
     }
+
 
     // Update is called once per frame
     void Update()
