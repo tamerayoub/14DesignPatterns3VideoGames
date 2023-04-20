@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IReturn
+public interface IEquippable
 {
-    void ReturnedObject();
+    void Equip();
+    void Unequip();
 }

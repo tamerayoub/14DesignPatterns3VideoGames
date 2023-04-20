@@ -10,7 +10,6 @@ public class HealthType : MonoBehaviour
 
 public class VideoScene : MonoBehaviour
 {
-
     public HealthModel model;
     public HealthController controller;
     public HealthView view;
